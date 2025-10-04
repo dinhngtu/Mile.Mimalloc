@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:   Mouri Internal Library Essentials
+  FILE:      Mile.Mimalloc.targets
+  PURPOSE:   MSBuild targets file for Mile.Mimalloc
+
+  LICENSE:   The MIT License
+
+  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <IncludePath>$(MSBuildThisFileDirectory)Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(MSBuildThisFileDirectory)Lib\$(PlatformTarget)\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ReferenceCopyLocalPaths Include="$(MSBuildThisFileDirectory)Redist\$(PlatformTarget)\*.*" />
+  </ItemGroup>
+  <ItemDefinitionGroup>
+    <Link>
+      <AdditionalDependencies>mimalloc-secure.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>

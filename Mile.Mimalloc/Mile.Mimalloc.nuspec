@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  PROJECT:   Mouri Internal Library Essentials
+  FILE:      Mile.Mimalloc.nuspec
+  PURPOSE:   NuGet package definition for Mile.Mimalloc
+
+  LICENSE:   The MIT License
+
+  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Mile.Mimalloc</id>
+    <version>$version$</version>
+    <description>Mimalloc Dynamic Linked Library</description>
+    <authors>Kenji Mouri</authors>
+    <projectUrl>https://github.com/ProjectMile/Mile.Mimalloc</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">build\native\License.txt</license>
+    <readme>build\native\ReadMe.md</readme>
+    <dependencies>
+      <group targetFramework="native0.0" />
+    </dependencies>
+    <repository type="git" url="https://github.com/ProjectMile/Mile.Mimalloc.git" />
+  </metadata>
+  <files>
+
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\x86-windows\bin\*.dll" target="build\native\Redist\x86" />
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\x86-windows\lib\*.lib" target="build\native\Lib\x86" />
+
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\bin\*.dll" target="build\native\Redist\x64" />
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\lib\*.lib" target="build\native\Lib\x64" />
+
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\arm64-windows\bin\*.dll" target="build\native\Redist\ARM64" />
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\arm64-windows\lib\*.lib" target="build\native\Lib\ARM64" />
+
+    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\include\*.h" target="build\native\Include" />
+
+    <file src="Mile.Mimalloc.targets" target="build\native"/>
+
+    <file src="..\ReadMe.md" target="build\native"/>
+    <file src="..\License.txt" target="build\native"/>
+    <file src="..\ReleaseNotes.md" target="build\native"/>
+
+  </files>
+</package>
