@@ -21,14 +21,13 @@ git -C mimalloc checkout -f
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 git -C mimalloc clean -fxd
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
-git -C mimalloc apply ..\0001-Secure-build-props.patch
-if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 git -C mimalloc apply ..\0001-Fix-cross-build.patch
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 
 rem Build Mimalloc x86
 mkdir Output\x86-secure
 pushd Output\x86-secure
+xcopy /Y /-I ..\..\secure.props Directory.Build.props
 cmake ..\..\mimalloc -A Win32 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 cmake --build . --config=Release -j
@@ -38,6 +37,7 @@ popd
 rem Build Mimalloc x64
 mkdir Output\x64-secure
 pushd Output\x64-secure
+xcopy /Y /-I ..\..\secure.props Directory.Build.props
 cmake ..\..\mimalloc -A x64 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 cmake --build . --config=Release -j
@@ -47,6 +47,7 @@ popd
 rem Build Mimalloc arm64
 mkdir Output\arm64-secure
 pushd Output\arm64-secure
+xcopy /Y /-I ..\..\secure.props Directory.Build.props
 cmake ..\..\mimalloc -A ARM64 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 cmake --build . --config=Release -j
