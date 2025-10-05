@@ -1,9 +1,9 @@
-From 21dfb23314cf858a04e715ca8a3f169801ff14d4 Mon Sep 17 00:00:00 2001
-From: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
-Date: Sun, 5 Oct 2025 04:01:04 +0200
-Subject: [PATCH 1/2] Secure build props
+From d9e6f37c76241333d5da4bc85d6d19a53942935e Mon Sep 17 00:00:00 2001
+From: Tu Dinh <contact@tudinh.xyz>
+Date: Sun, 5 Oct 2025 04:39:06 +0200
+Subject: [PATCH] Secure build props
 
-Signed-off-by: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
+Signed-off-by: Tu Dinh <contact@tudinh.xyz>
 ---
  Directory.Build.props | 18 ++++++++++++++++++
  1 file changed, 18 insertions(+)

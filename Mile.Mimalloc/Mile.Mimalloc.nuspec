@@ -6,14 +6,15 @@
 
   LICENSE:   The MIT License
 
-  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+  MAINTAINER: Tu Dinh (contact@tudinh.xyz)
+              MouriNaruto (Kenji.Mouri@outlook.com)
 -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Mile.Mimalloc</id>
     <version>$version$</version>
     <description>Mimalloc Dynamic Linked Library</description>
-    <authors>Kenji Mouri</authors>
+    <authors>Tu Dinh, Kenji Mouri</authors>
     <projectUrl>https://github.com/ProjectMile/Mile.Mimalloc</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">build\native\License.txt</license>

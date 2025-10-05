@@ -31,7 +31,7 @@ mkdir Output\x86-secure
 pushd Output\x86-secure
 cmake ..\..\mimalloc -A Win32 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
-cmake --build . --config=Release
+cmake --build . --config=Release -j
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 popd
 
@@ -40,7 +40,7 @@ mkdir Output\x64-secure
 pushd Output\x64-secure
 cmake ..\..\mimalloc -A x64 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
-cmake --build . --config=Release
+cmake --build . --config=Release -j
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 popd
 
@@ -49,7 +49,7 @@ mkdir Output\arm64-secure
 pushd Output\arm64-secure
 cmake ..\..\mimalloc -A ARM64 -DMI_OVERRIDE=ON -DMI_SECURE=ON
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
-cmake --build . --config=Release
+cmake --build . --config=Release -j
 if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
 popd
 

@@ -1,9 +1,9 @@
-From 0d1453cc47a2c18d3ef6fc3be76a583feb5344f7 Mon Sep 17 00:00:00 2001
-From: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
-Date: Sun, 5 Oct 2025 04:07:30 +0200
+From bf5bc607c6c04f6de6bb42985f84ea5c63b4b2b2 Mon Sep 17 00:00:00 2001
+From: Tu Dinh <contact@tudinh.xyz>
+Date: Sun, 5 Oct 2025 04:38:57 +0200
 Subject: [PATCH] Fix cross build
 
-Signed-off-by: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
+Signed-off-by: Tu Dinh <contact@tudinh.xyz>
 ---
  CMakeLists.txt | 8 +++++---
  1 file changed, 5 insertions(+), 3 deletions(-)

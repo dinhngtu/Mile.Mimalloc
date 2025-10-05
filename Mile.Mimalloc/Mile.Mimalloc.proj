@@ -6,7 +6,8 @@
 
   LICENSE:   The MIT License
 
-  MAINTAINER: MouriNaruto (Kenji.Mouri@outlook.com)
+  MAINTAINER: Tu Dinh (contact@tudinh.xyz)
+              MouriNaruto (Kenji.Mouri@outlook.com)
 -->
 <Project Sdk="Microsoft.Build.NoTargets/3.7.56" DefaultTargets="Restore;Build">
   <PropertyGroup>
@@ -16,7 +17,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <OutputFileNamesWithoutVersion>true</OutputFileNamesWithoutVersion>
     <PackageOutputPath>$(MileProjectOutputPath)</PackageOutputPath>
-    <Version>1.1.1-mimalloc.3.1.5</Version>
+    <Version>1.1.2-mimalloc.3.1.5</Version>
     <NuspecProperties>version=$(Version);</NuspecProperties>
     <NuspecFile>Mile.Mimalloc.nuspec</NuspecFile>
   </PropertyGroup>
