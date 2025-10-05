@@ -38,6 +38,10 @@
 
     <file src="Mile.Mimalloc.targets" target="build\native"/>
 
+    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject.exe" target="build\native" />
+    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject32.exe" target="build\native" />
+    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject-arm64.exe" target="build\native\Include" />
+
     <file src="..\ReadMe.md" target="build\native"/>
     <file src="..\License.txt" target="build\native"/>
     <file src="..\ReleaseNotes.md" target="build\native"/>

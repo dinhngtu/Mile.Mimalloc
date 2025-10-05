@@ -21,4 +21,9 @@
       <AdditionalDependencies>mimalloc-secure.dll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Condition="'$(Platform)' == 'x86'" Command="$(MSBuildThisFileDirectory)minject32.exe --inplace --postfix=secure --force $(TargetPath)" />
+    <Exec Condition="'$(Platform)' == 'x64'" Command="$(MSBuildThisFileDirectory)minject.exe --inplace --postfix=secure --force $(TargetPath)" />
+    <Exec Condition="'$(Platform)' == 'ARM64'" Command="$(MSBuildThisFileDirectory)minject-arm64.exe --inplace --postfix=secure --force $(TargetPath)" />
+  </Target>
 </Project>
