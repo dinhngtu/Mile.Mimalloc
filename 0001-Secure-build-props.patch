@@ -1,0 +1,39 @@
+From 21dfb23314cf858a04e715ca8a3f169801ff14d4 Mon Sep 17 00:00:00 2001
+From: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
+Date: Sun, 5 Oct 2025 04:01:04 +0200
+Subject: [PATCH 1/2] Secure build props
+
+Signed-off-by: Tu Dinh <1257909+dinhngtu@users.noreply.github.com>
+---
+ Directory.Build.props | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 Directory.Build.props
+
+diff --git a/Directory.Build.props b/Directory.Build.props
+new file mode 100644
+index 00000000..69d555c8
+--- /dev/null
++++ b/Directory.Build.props
+@@ -0,0 +1,18 @@
++<?xml version="1.0" encoding="utf-8"?>
++<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
++  <ItemDefinitionGroup>
++    <ClCompile>
++      <SDLCheck>true</SDLCheck>
++    </ClCompile>
++  </ItemDefinitionGroup>
++  <ItemDefinitionGroup Condition="'$(Configuration)'=='Release'">
++    <ClCompile>
++      <ControlFlowGuard>Guard</ControlFlowGuard>
++      <GuardEHContMetadata Condition="'$(Platform)' == 'ARM64' Or '$(Platform)' == 'ARM64EC' Or '$(Platform)' == 'x64'">true</GuardEHContMetadata>
++      <GuardSignedReturns Condition="'$(Platform)' == 'ARM64' Or '$(Platform)' == 'ARM64EC'">true</GuardSignedReturns>
++    </ClCompile>
++    <Link>
++      <CETCompat Condition="'$(Platform)' == 'Win32' Or '$(Platform)' == 'x64'">true</CETCompat>
++    </Link>
++  </ItemDefinitionGroup>
++</Project>
+\ No newline at end of file
+-- 
+2.51.0.windows.1
+

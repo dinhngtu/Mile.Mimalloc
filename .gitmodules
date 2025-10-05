@@ -1,3 +1,3 @@
-[submodule "Mile.Mimalloc.Vcpkg"]
-	path = Mile.Mimalloc.Vcpkg
-	url = https://github.com/microsoft/vcpkg
+[submodule "mimalloc"]
+	path = mimalloc
+	url = https://github.com/microsoft/mimalloc.git

@@ -25,22 +25,22 @@
   </metadata>
   <files>
 
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\x86-windows\bin\*.dll" target="build\native\Redist\x86" />
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\x86-windows\lib\*.lib" target="build\native\Lib\x86" />
+    <file src="..\Output\x86-secure\Release\*.dll" target="build\native\Redist\x86" />
+    <file src="..\Output\x86-secure\Release\*.lib" target="build\native\Lib\x86" />
 
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\bin\*.dll" target="build\native\Redist\x64" />
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\lib\*.lib" target="build\native\Lib\x64" />
+    <file src="..\Output\x64-secure\Release\*.dll" target="build\native\Redist\x64" />
+    <file src="..\Output\x64-secure\Release\*.lib" target="build\native\Lib\x64" />
 
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\arm64-windows\bin\*.dll" target="build\native\Redist\ARM64" />
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\arm64-windows\lib\*.lib" target="build\native\Lib\ARM64" />
+    <file src="..\Output\arm64-secure\Release\*.dll" target="build\native\Redist\ARM64" />
+    <file src="..\Output\arm64-secure\Release\*.lib" target="build\native\Lib\ARM64" />
 
-    <file src="..\Mile.Mimalloc.Vcpkg\installed\x64-windows\include\*.h" target="build\native\Include" />
+    <file src="..\mimalloc\include\*.h" target="build\native\Include" />
 
     <file src="Mile.Mimalloc.targets" target="build\native"/>
 
-    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject.exe" target="build\native" />
-    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject32.exe" target="build\native" />
-    <file src="..\Mile.Mimalloc.Vcpkg\buildtrees\mimalloc\src\*\bin\minject-arm64.exe" target="build\native" />
+    <file src="..\mimalloc\bin\minject.exe" target="build\native" />
+    <file src="..\mimalloc\bin\minject32.exe" target="build\native" />
+    <file src="..\mimalloc\bin\minject-arm64.exe" target="build\native" />
 
     <file src="..\ReadMe.md" target="build\native"/>
     <file src="..\License.txt" target="build\native"/>
